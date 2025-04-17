@@ -1,15 +1,15 @@
 
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { GitHubIcon, ExternalLinkIcon } from "@/components/Icons";
+import { CodeIcon, DevicePhoneIcon, BookOpenIcon } from "@/components/Icons";
 
 interface Project {
   title: string;
   description: string;
   technologies: string[];
   image: string;
-  github?: string;
-  liveLink?: string;
+  status: "completed" | "in-progress";
+  icon?: React.ReactNode;
 }
 
 const ProjectsSection = () => {
@@ -19,23 +19,38 @@ const ProjectsSection = () => {
       description: "Developed a feature-rich dashboard using React, reducing support requests by 25%. Optimized API calls, improving performance by 70%.",
       technologies: ["React", "API", "JavaScript"],
       image: "/placeholder.svg",
-      github: "https://github.com",
-      liveLink: "https://example.com"
+      status: "completed",
+      icon: <CodeIcon className="w-4 h-4" />
+    },
+    {
+      title: "No Agenda Spaces",
+      description: "A mobile application designed to help users create and manage shared collaborative spaces without predefined objectives.",
+      technologies: ["React Native", "Firebase", "TypeScript"],
+      image: "/placeholder.svg",
+      status: "in-progress",
+      icon: <DevicePhoneIcon className="w-4 h-4" />
+    },
+    {
+      title: "LMS - Learning Management System",
+      description: "Comprehensive learning platform with course management, progress tracking, and interactive content delivery.",
+      technologies: ["Next.js", "MongoDB", "Tailwind CSS"],
+      image: "/placeholder.svg",
+      status: "completed",
+      icon: <BookOpenIcon className="w-4 h-4" />
     },
     {
       title: "E-Commerce Platform",
       description: "Built a responsive e-commerce platform with product filtering, cart functionality, and secure checkout process.",
       technologies: ["Next.js", "Redux", "Tailwind CSS"],
       image: "/placeholder.svg",
-      github: "https://github.com",
-      liveLink: "https://example.com"
+      status: "completed"
     },
     {
       title: "Task Management App",
       description: "Designed and developed a task management application with drag-and-drop functionality and real-time updates.",
       technologies: ["React", "TypeScript", "Firebase"],
       image: "/placeholder.svg",
-      github: "https://github.com"
+      status: "completed"
     }
   ];
 
@@ -68,23 +83,13 @@ const ProjectsSection = () => {
               <CardContent>
                 <p className="text-gray-700">{project.description}</p>
               </CardContent>
-              <CardFooter className="flex gap-4">
-                {project.github && (
-                  <Button variant="outline" size="sm" asChild>
-                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                      <GitHubIcon className="w-4 h-4" />
-                      <span>Code</span>
-                    </a>
-                  </Button>
-                )}
-                {project.liveLink && (
-                  <Button size="sm" asChild>
-                    <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                      <ExternalLinkIcon className="w-4 h-4" />
-                      <span>Live Demo</span>
-                    </a>
-                  </Button>
-                )}
+              <CardFooter className="flex justify-between items-center">
+                <div className="flex items-center gap-2">
+                  {project.icon}
+                  <span className={`text-sm font-medium ${project.status === "in-progress" ? "text-amber-600" : "text-green-600"}`}>
+                    {project.status === "in-progress" ? "In Progress" : "Completed"}
+                  </span>
+                </div>
               </CardFooter>
             </Card>
           ))}

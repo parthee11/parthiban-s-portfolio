@@ -13,7 +13,9 @@ import {
   PenTool,
   Mail,
   Phone,
-  MapPin
+  MapPin,
+  Smartphone,
+  BookOpen
 } from "lucide-react";
 
 export const GitHubIcon = ({ className }: { className?: string }) => (
@@ -97,5 +99,17 @@ export const PhoneIcon = ({ className }: { className?: string }) => (
 export const MapPinIcon = ({ className }: { className?: string }) => (
   <div className="icon-box">
     <MapPin className={className} />
+  </div>
+);
+
+export const DevicePhoneIcon = ({ className }: { className?: string }) => (
+  <div className="icon-box">
+    <Smartphone className={className} />
+  </div>
+);
+
+export const BookOpenIcon = ({ className }: { className?: string }) => (
+  <div className="icon-box">
+    <BookOpen className={className} />
   </div>
 );
