@@ -13,103 +13,61 @@ import {
   PenTool,
   Mail,
   Phone,
-  MapPin,
-  Smartphone,
-  BookOpen
+  MapPin
 } from "lucide-react";
 
 export const GitHubIcon = ({ className }: { className?: string }) => (
-  <div className="icon-box">
-    <Github className={className} />
-  </div>
+  <Github className={className} fill="currentColor" />
 );
 
 export const LinkedInIcon = ({ className }: { className?: string }) => (
-  <div className="icon-box">
-    <Linkedin className={className} />
-  </div>
+  <Linkedin className={className} fill="currentColor" />
 );
 
 export const TwitterIcon = ({ className }: { className?: string }) => (
-  <div className="icon-box">
-    <Twitter className={className} />
-  </div>
+  <Twitter className={className} fill="currentColor" />
 );
 
 export const ExternalLinkIcon = ({ className }: { className?: string }) => (
-  <div className="icon-box">
-    <ExternalLink className={className} />
-  </div>
+  <ExternalLink className={className} fill="currentColor" />
 );
 
 export const BriefcaseIcon = ({ className }: { className?: string }) => (
-  <div className="icon-box">
-    <Briefcase className={className} />
-  </div>
+  <Briefcase className={className} fill="currentColor" />
 );
 
 export const CalendarIcon = ({ className }: { className?: string }) => (
-  <div className="icon-box">
-    <Calendar className={className} />
-  </div>
+  <Calendar className={className} fill="currentColor" />
 );
 
 export const CheckCircleIcon = ({ className }: { className?: string }) => (
-  <div className="icon-box">
-    <CheckCircle className={className} />
-  </div>
+  <CheckCircle className={className} fill="currentColor" />
 );
 
 export const CodeIcon = ({ className }: { className?: string }) => (
-  <div className="icon-box">
-    <Code className={className} />
-  </div>
+  <Code className={className} fill="currentColor" />
 );
 
 export const ServerIcon = ({ className }: { className?: string }) => (
-  <div className="icon-box">
-    <Server className={className} />
-  </div>
+  <Server className={className} fill="currentColor" />
 );
 
 export const BrainIcon = ({ className }: { className?: string }) => (
-  <div className="icon-box">
-    <Brain className={className} />
-  </div>
+  <Brain className={className} fill="currentColor" />
 );
 
 export const PenToolIcon = ({ className }: { className?: string }) => (
-  <div className="icon-box">
-    <PenTool className={className} />
-  </div>
+  <PenTool className={className} fill="currentColor" />
 );
 
 export const MailIcon = ({ className }: { className?: string }) => (
-  <div className="icon-box">
-    <Mail className={className} />
-  </div>
+  <Mail className={className} fill="currentColor" />
 );
 
 export const PhoneIcon = ({ className }: { className?: string }) => (
-  <div className="icon-box">
-    <Phone className={className} />
-  </div>
+  <Phone className={className} fill="currentColor" />
 );
 
 export const MapPinIcon = ({ className }: { className?: string }) => (
-  <div className="icon-box">
-    <MapPin className={className} />
-  </div>
-);
-
-export const DevicePhoneIcon = ({ className }: { className?: string }) => (
-  <div className="icon-box">
-    <Smartphone className={className} />
-  </div>
-);
-
-export const BookOpenIcon = ({ className }: { className?: string }) => (
-  <div className="icon-box">
-    <BookOpen className={className} />
-  </div>
+  <MapPin className={className} fill="currentColor" />
 );
