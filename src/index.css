@@ -113,15 +113,6 @@
   animation: slideUp 0.8s ease-out forwards;
 }
 
-/* Icon box styling */
-.icon-box {
-  @apply inline-flex items-center justify-center p-2 rounded-md bg-primary/10 text-primary border border-primary/30 transition-colors;
-}
-
-.icon-box:hover {
-  @apply bg-primary/20;
-}
-
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
