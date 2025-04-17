@@ -89,7 +89,7 @@
 
 .section-title::after {
   content: "";
-  @apply absolute left-1/2 -translate-x-1/2 bottom-0 w-20 h-1 bg-primary rounded-full mt-4;
+  @apply absolute left-1/2 -translate-x-1/2 -bottom-4 w-20 h-1 bg-primary rounded-full mt-4;
 }
 
 .experience-card {
@@ -102,7 +102,7 @@
 }
 
 .skill-tag {
-  @apply px-3 py-1 bg-secondary text-secondary-foreground rounded-full text-sm font-medium;
+  @apply px-3 py-1 bg-secondary text-secondary-foreground rounded-full text-xs font-medium;
 }
 
 .animate-fade-in {
